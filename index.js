@@ -130,4 +130,4 @@ bot.on('raw', event => {
     }   
 });
 
-bot.login(tokenfile.token);
+bot.login(process.env.BOT_TOKEN);
