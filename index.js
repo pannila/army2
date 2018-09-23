@@ -65,6 +65,7 @@ bot.on("message", async message => {
 
 });
 
+//Settings!
 const yourID = "403640956571615243"; //Instructions on how to get this: https://redd.it/40zgse
 const setupCMD = ",dd"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
@@ -72,6 +73,10 @@ const roles = ["Members"];
 const reactions = ["âœ…"];
 const botToken = ""; /*You'll have to set this yourself; read more
                      here https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token*/
+
+//Load up the bot...
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
 //If there isn't a reaction for every role, scold the user!
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
